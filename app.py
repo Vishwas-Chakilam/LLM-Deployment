@@ -23,18 +23,10 @@ def generate(req: Request):
     
     # ✅ Add instruction wrapper (VERY IMPORTANT)
     formatted_prompt = f"""
-You are an expert SEO content writer.
-
-Follow instructions strictly.
-
-TASK:
-{req.prompt}
-
-Rules:
-- Return clean output
-- Do not add explanations
-- Follow format exactly
-"""
+        Follow instructions strictly.
+        TASK:
+        {req.prompt}
+    """
 
     result = generator(
         formatted_prompt,
